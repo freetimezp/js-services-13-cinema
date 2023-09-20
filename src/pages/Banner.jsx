@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import MovieContent from '../components/MovieContent';
 import MovieDate from '../components/MovieDate';
 import PlayBtn from '../components/PlayBtn';
+import MovieSwiper from '../components/MovieSwiper';
 
 import bgImg from '../images/transformer.jpg';
 
@@ -22,6 +23,10 @@ function Banner() {
         fetchData();
     }, []);
 
+    const handleSlideChange = (id) => {
+        console.log(id);
+    }
+
     return (
         <div className='banner'>
             <div className="movie">
@@ -38,6 +43,7 @@ function Banner() {
                     </div>
                 </div>
             </div>
+            {movies && movies.length > 0 && <MovieSwiper slides={movies} slideChange={handleSlideChange} />}
         </div>
     );
 };

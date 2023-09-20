@@ -2,3 +2,4 @@ https://www.youtube.com/watch?v=0mdjgQdQF1k&t=30s
 https://create-react-app.dev/
 https://fonts.google.com/
 https://ionic.io/ionicons/usage
+https://swiperjs.com/get-started
