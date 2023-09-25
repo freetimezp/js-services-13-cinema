@@ -1,18 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import Modal from './Modal';
 
 import './PlayBtn.css';
 
 function PlayBtn({ movie }) {
+    const [modal, setModal] = useState(false);
+
+    const toggleModal = () => {
+        setModal(!modal);
+    };
+
     return (
-        <div
-            className={`trailer d-flex justify-content-center align-items-center 
+        <>
+            <div
+                className={`trailer d-flex justify-content-center align-items-center 
             ${movie.active ? 'active' : undefined}`}
-        >
-            <a href="#" className="playBtn">
-                <ion-icon name="play-outline"></ion-icon>
-            </a>
-            <p>Watch Trailer</p>
-        </div>
+            >
+                <a href="#" className="playBtn" onClick={toggleModal}>
+                    <ion-icon name="play-outline"></ion-icon>
+                </a>
+                <p>Watch Trailer</p>
+            </div>
+            {movie.active && <Modal movie={movie} status={modal} toggleModal={toggleModal} />}
+        </>
     );
 };
 
