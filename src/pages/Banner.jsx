@@ -40,7 +40,7 @@ function Banner() {
         <div className='banner'>
             {
                 movies && movies.length > 0 && movies.map(movie => (
-                    <div className="movie">
+                    <div className="movie" key={movie._id}>
                         <img
                             src={movie.bgImg}
                             alt="banner bg"
