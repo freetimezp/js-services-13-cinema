@@ -55,8 +55,8 @@ function Footer() {
                         <div className="col-lg-2 col-6 footer-links">
                             <h4>Useful Links</h4>
                             <ul>
-                                {usefulLinks?.map((link) => (
-                                    <FooterNavItem key={link._id} name={link} />
+                                {usefulLinks?.map((link, i) => (
+                                    <FooterNavItem key={i} name={link} />
                                 ))}
                             </ul>
                         </div>
@@ -64,8 +64,8 @@ function Footer() {
                         <div className="col-lg-2 col-6 footer-links">
                             <h4>Our Cinemas</h4>
                             <ul>
-                                {locations?.map((link) => (
-                                    <FooterNavItem key={link._id} name={link} />
+                                {locations?.map((link, i) => (
+                                    <FooterNavItem key={i} name={link} />
                                 ))}
                             </ul>
                         </div>
